@@ -68,6 +68,8 @@ Let's extract the central portion of the image::
 
     pix2vec -c M3G20090103T084105_V03_L1B.cub -s 152,162 -l5864,5874 -o M3G20090103T084105_V03_L1B_center.gpkg 
 
+the vector file can be then visualized in your favorite GIS:
+
 .. image:: docs/images/m3cube-a.png
         :alt: M3-subcube
         :width: 600
