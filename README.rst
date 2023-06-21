@@ -1,5 +1,5 @@
 ===============
-Pixel to Vector
+pix2vec
 ===============
 *Geospatial Vector Representation of Remote Sensing Hyperspectral Data*
 
@@ -19,7 +19,7 @@ Pixel to Vector
 
 
 
-Vector Representation of Hyperspectral Data
+pix2vec: Vector Representation of Hyperspectral Data Cubes
 
 
 * Free software: GNU General Public License v3
