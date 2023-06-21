@@ -76,10 +76,14 @@ test
 ![](docs/images/m3cube-a.png)
 
 
+
 Documentation
 -------------
 
 Documentation is available at https://pix2vec.readthedocs.io
+
+
+<img src="./docs/images/m3cube-a.png">
 
 
 Credits
