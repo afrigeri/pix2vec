@@ -9,6 +9,6 @@ To use Pixel to Vector in a project::
 
 .. figure:: images/m3cube-a.png
    :scale: 35 %
-   :alt: map to buried treasure
+   :alt: a 10 by 10 sub-cube
 
-   This is the caption of the figure (a simple paragraph).
+   A portion of a cube.
