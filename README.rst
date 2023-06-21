@@ -70,8 +70,10 @@ Let's extract the central portion of the image::
 
 resulting into:
 
-![image](docs/images/m3cube-a.png)
+![image](docs/images/m3cube-a.png )
+
 .. image:: docs/images/m3cube-a.png
+
 Documentation
 -------------
 
