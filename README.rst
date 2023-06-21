@@ -68,22 +68,13 @@ Let's extract the central portion of the image::
 
     pix2vec -c M3G20090103T084105_V03_L1B.cub -s 152,162 -l5864,5874 -o M3G20090103T084105_V03_L1B_center.gpkg 
 
-
-[Alt](./docs/images/m3cube-a.png)
-
-test
-
-![](docs/images/m3cube-a.png)
-
-
+.. image:: docs/images/m3cube-a.png
+        :target: https://travis-ci.com/afrigeri/pix2vec
 
 Documentation
 -------------
 
 Documentation is available at https://pix2vec.readthedocs.io
-
-
-<img src="./docs/images/m3cube-a.png">
 
 
 Credits
