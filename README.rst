@@ -70,6 +70,9 @@ Let's extract the central portion of the image::
 
 resulting into:
 
+![Alt text](/docs/images/m3cube-a.png "Optional title")
+
+
 <img src="docs/images/m3cube-a.png" width="50%" />
 
  ![image](docs/images/m3cube-a.png)
