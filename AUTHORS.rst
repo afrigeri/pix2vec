@@ -5,7 +5,7 @@ Credits
 Development Lead
 ----------------
 
-* Alessandro Frigeri <alessandro.frigeri@inaf.it>
+* Alessandro Frigeri, Istituto Nazionale di Astrofisica - INAF <alessandro.frigeri@inaf.it>
 
 Contributors
 ------------
