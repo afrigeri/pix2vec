@@ -55,6 +55,11 @@ Get some info about a M3 cube::
     pix2vect - 2023 Alessandro Frigeri - Istituto Nazionale di Astrofisica
     Cube Type:M3 samples:304 lines:11739 file:M3G20090103T084105_V03_L1B.cub
 
+Let's extract the central portion of the image::
+
+    pix2vec -c M3G20090103T084105_V03_L1B.cub -s 152,162 -l5864,5874 -o M3G20090103T084105_V03_L1B_center.gpkg 
+
+resulting into:
 
 
 Credits

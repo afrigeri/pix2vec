@@ -104,7 +104,7 @@ class GndPixels:
 
         # create the spatial reference system, WGS84
         srs =  osr.SpatialReference()
-        srs.ImportFromEPSG(4326)
+        srs.SetFromUserInput("IAU:30100") # Moon
 
         self.layer = self.ds.CreateLayer("states_centroids", srs, geom_type=ogr.wkbPolygon)
 
