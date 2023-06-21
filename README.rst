@@ -72,7 +72,7 @@ resulting into:
 
 <img src="docs/images/m3cube-a.png" width="50%" />
 
-![image](docs/images/m3cube-a.png "CUBE")
+![image](docs/images/m3cube-a.png)
 
 
 
