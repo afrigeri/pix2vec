@@ -71,7 +71,9 @@ Let's extract the central portion of the image::
 
 [Alt](./docs/images/m3cube-a.png)
 
+test
 
+![](docs/images/m3cube-a.png)
 
 
 Documentation
