@@ -70,7 +70,7 @@ Let's extract the central portion of the image::
 
 resulting into:
 
-<img src="docs/images/m3cube-a.png" width="50">
+<img src="docs/images/m3cube-a.png" width="50%" />
 
 [image](docs/images/m3cube-a.png "CUBE")
 
