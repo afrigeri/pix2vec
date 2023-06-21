@@ -1,7 +1,7 @@
 """Console script for pix2vec."""
 import argparse
 import sys
-from .pix2vec import Cube
+from .pix2vec import Cube, GndPixels
 import os
 
 def main():
@@ -55,8 +55,8 @@ def main():
         s0, s1 = 1, c.samples
 
     if args.output:
-            p = GndPixels(c,args.output,s0,s1,l0,l1)
-    sys.exit(main())  # pragma: no cover
+        p = GndPixels(c,args.output,s0,s1,l0,l1)
+        sys.exit(0)  # pragma: no cover
 
 if __name__ == "__main__":
     main()

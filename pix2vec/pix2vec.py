@@ -37,8 +37,8 @@ class GndPixels:
     '''
     def __init__(self,cube,vect_out,s0,s1,l0,l1):
         self.file = tempfile.NamedTemporaryFile()
-        #self.cptfname =  os.path.join(tempfile.mkdtemp(), 'cpt.csv')
-        self.cptfname =  'cpt.csv'
+        self.cptfname =  os.path.join(tempfile.mkdtemp(), 'cpt.csv')
+        #self.cptfname =  'cpt.csv'
         self.coordlistfname =  os.path.join(tempfile.mkdtemp(), 'coords.lst')
         #self.coordlistfname = 'coords_tmp.lst'
         self.s0 = s0
@@ -75,27 +75,26 @@ class GndPixels:
     def write_vertex(self):
         #
         #p = isis.campt(self.cube.fname,sample=s,line=l,format='flat',to=self.csvfname)
-        sys.stdout.write("reading coordlist %s\n and computing campt"%self.coordlistfname)
+        sys.stdout.write("reading coordlist %s\n and computing campt\n"%self.coordlistfname)
         p = isis.campt(self.cube.fname,usecoordlist=True,coordlist=self.coordlistfname,format='FLAT',to=self.cptfname,coordtype='image')
-        sys.stdout.write("campt done")
+        sys.stdout.write("campt done!")
 
-
+    '''
     def write_file(self,file):
 
         outShapefile = "pippo.gpkg"
         outDriver = ogr.GetDriverByName("GPKG")
         outDataSource = outDriver.CreateDataSource(outShapefile)
         self.ds = outDataSource
-
+    '''
 
     def _open_ds(self,vect_output):
         # Create the output Layer
         #mp = ogr.Geometry(ogr.wkbMultiPolygon)
         # Add an ID field
 
-        outShapefile = vect_output
         outDriver = ogr.GetDriverByName("GPKG")
-        outDataSource = outDriver.CreateDataSource(outShapefile)
+        outDataSource = outDriver.CreateDataSource(vect_output)
         self.ds = outDataSource
 
 
@@ -118,7 +117,7 @@ class GndPixels:
 
     def add_gndpixel_features(self):
         #self.file = 'pippo1'
-        print("*************>"+self.cptfname)
+        #print("========>"+self.cptfname)
         with open(self.cptfname, 'r') as fp:
             row_count = len(fp.readlines()) - 1
         fp.close()

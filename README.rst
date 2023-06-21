@@ -47,11 +47,14 @@ Planetary Mapping Spectrometer Data. 6th Planetay Data Workshop, Flagstaff, Ariz
 pix2vec in brief
 -----------------
 
+`pix2vect` requires spice-initialized ISIS cubes (see `spiceinit`).  
+
 Get some info about a M3 cube::
 
     (ISIS) hopi:pix2vec alf$ pix2vec -i -c M3G20090103T084105_V03_L1B.cub 
     pix2vect - 2023 Alessandro Frigeri - Istituto Nazionale di Astrofisica
     Cube Type:M3 samples:304 lines:11739 file:M3G20090103T084105_V03_L1B.cub
+
 
 
 Credits
