@@ -44,6 +44,15 @@ Frigeri, A. and Hare, T. 2023. Geospatial Vector Representation of
 Planetary Mapping Spectrometer Data. 6th Planetay Data Workshop, Flagstaff, Arizona 26-28th June 2023, Abstract #7088.
 
 
+installation
+------------
+
+within a working ISIS environment, run:
+
+    pip install pix2vect
+
+
+
 pix2vec in brief
 -----------------
 
@@ -60,6 +69,11 @@ Let's extract the central portion of the image::
     pix2vec -c M3G20090103T084105_V03_L1B.cub -s 152,162 -l5864,5874 -o M3G20090103T084105_V03_L1B_center.gpkg 
 
 resulting into:
+
+Documentation
+-------------
+
+Documentation is available at https://pix2vec.readthedocs.io
 
 
 Credits
