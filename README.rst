@@ -1,7 +1,7 @@
 ===============
 pix2vec
 ===============
-*Geospatial Vector Representation of Remote Sensing Hyperspectral Data*
+*Geospatial Vector Representation of Planetary Remote Sensing Hyperspectral Data*
 
 ---------------------------------
 
@@ -9,17 +9,11 @@ pix2vec
 .. image:: https://img.shields.io/pypi/v/pix2vec.svg
         :target: https://pypi.python.org/pypi/pix2vec
 
-.. image:: https://img.shields.io/travis/afrigeri/pix2vec.svg
-        :target: https://travis-ci.com/afrigeri/pix2vec
-
 .. image:: https://readthedocs.org/projects/pix2vec/badge/?version=latest
         :target: https://pix2vec.readthedocs.io/en/latest/?version=latest
         :alt: Documentation Status
 
-
-
-
-pix2vec: Vector Representation of Hyperspectral Data Cubes
+pix2vec: Vector Representation of Planetary Hyperspectral Data Cubes
 
 
 * Free software: GNU General Public License v3

@@ -30,7 +30,7 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
     ],
-    description="Vector Representation of Planetary Hyperspectral Data",
+    description="pix2vec produces a vector representation of planetary mapping spectrometers starting from hyperspectral an ISIS data cube",
     entry_points={
         'console_scripts': [
             'pix2vec=pix2vec.cli:main',
