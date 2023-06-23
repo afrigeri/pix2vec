@@ -74,7 +74,7 @@ now we create a vector GIS file representing the geometry of the sensor's pixel 
 
 the vector file can then be loaded in your favorite GIS, and we can plot the file with a `PixelValue` greyscale:
 
-.. image:: /docs/images/m3pixelvalue.png
+.. image:: /docs/images/m3-PixelValue.png
         :alt: M3-PixelValue
         :width: 600
 
