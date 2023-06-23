@@ -20,7 +20,9 @@ setup(
     python_requires='>=3.6',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
+        'Intended Audience :: Science/Research',
         'Intended Audience :: Developers',
+	'Intended Audience :: End Users/Desktop''
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Natural Language :: English',
         'Programming Language :: Python :: 3',
@@ -28,7 +30,7 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
     ],
-    description="Vector Representation of Hyperspectral Data",
+    description="Vector Representation of Planetary Hyperspectral Data",
     entry_points={
         'console_scripts': [
             'pix2vec=pix2vec.cli:main',

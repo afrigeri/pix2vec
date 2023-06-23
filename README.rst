@@ -41,7 +41,18 @@ Cite in your work
 -------------------
 
 Frigeri, A. and Hare, T. 2023. Geospatial Vector Representation of 
-Planetary Mapping Spectrometer Data. 6th Planetay Data Workshop, Flagstaff, Arizona 26-28th June 2023, Abstract #7088.
+Planetary Mapping Spectrometer Data. 6th Planetay Data Workshop, Flagstaff, Arizona 26-28th June 2023, Abstract #7088.::
+
+ @INPROCEEDINGS{FrigeriHare2023,
+       author = {{Frigeri}, A. and {Hare}, T.},
+        title = "{Geospatial Vector Representation of Planetary Mapping Spectrometer Data}",
+    booktitle = {6th Planetay Data Workshop},
+         year = 2023,
+       series = {LPI},
+        month = jun,
+          eid = {7088},
+        pages = {7088}
+ }
 
 
 installation
