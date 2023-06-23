@@ -8,13 +8,13 @@ Installation
 Stable release
 --------------
 
-To install Pixel to Vector, run this command in your terminal:
+To install pix2vec, run this command in your terminal:
 
 .. code-block:: console
 
     $ pip install pix2vec
 
-This is the preferred method to install Pixel to Vector, as it will always install the most recent stable release.
+This is the preferred method to install pix2vec, as it will always install the most recent stable release.
 
 If you don't have `pip`_ installed, this `Python installation guide`_ can guide
 you through the process.
@@ -26,7 +26,7 @@ you through the process.
 From sources
 ------------
 
-The sources for Pixel to Vector can be downloaded from the `Github repo`_.
+The sources for pix2vec can be downloaded from the `Github repo`_.
 
 You can either clone the public repository:
 

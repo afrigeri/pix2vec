@@ -58,21 +58,28 @@ pix2vec in brief
 
 `pix2vect` requires spice-initialized ISIS cubes (see `spiceinit`).  
 
-Get some info about a M3 cube::
+Let's start with an hyperspectral cube from the The Moon Mineralogy Mapper (M3), the NASA spectrometer onboard  Chandrayaan-1 mission to the Moon::
 
-    (ISIS) hopi:pix2vec alf$ pix2vec -i -c M3G20090103T084105_V03_L1B.cub 
+    (ISIS) $ pix2vec -i -c M3G20090103T084105_V03_L1B.cub 
     pix2vect - 2023 Alessandro Frigeri - Istituto Nazionale di Astrofisica
     Cube Type:M3 samples:304 lines:11739 file:M3G20090103T084105_V03_L1B.cub
 
-Let's extract the central portion of the image::
+now we create a vector GIS file representing the geometry of the sensor's pixel on the lunar surface::
 
     pix2vec -c M3G20090103T084105_V03_L1B.cub -s 152,162 -l5864,5874 -o M3G20090103T084105_V03_L1B_center.gpkg 
 
-the vector file can be then visualized in your favorite GIS:
+the vector file can then be loaded in your favorite GIS, and we can plot the `PixelValue` field:
 
-.. image:: docs/images/m3cube-a.png
+.. image:: docs/images/m3cube-c.png
         :alt: M3-subcube
         :width: 600
+
+for each ground-projected pixel, you now have access to these fields:
+
+    Filename,Sample,Line,PixelValue,RightAscension,Declination,PlanetocentricLatitude,PlanetographicLatitude,PositiveEast360Longitude,PositiveEast180Longitude,PositiveWest360Longitude,PositiveWest180Longitude,BodyFixedCoordinateX,BodyFixedCoordinateY,BodyFixedCoordinateZ,LocalRadius,SampleResolution,LineResolution,SpacecraftPositionX,SpacecraftPositionY,SpacecraftPositionZ,SpacecraftAzimuth,SlantDistance,TargetCenterDistance,SubSpacecraftLatitude,SubSpacecraftLongitude,SpacecraftAltitude,OffNadirAngle,SubSpacecraftGroundAzimuth,SunPositionX,SunPositionY,SunPositionZ,SubSolarAzimuth,SolarDistance,SubSolarLatitude,SubSolarLongitude,SubSolarGroundAzimuth,Phase,Incidence,Emission,NorthAzimuth,EphemerisTime,UTC,LocalSolarTime,SolarLongitude,LookDirectionBodyFixedX,LookDirectionBodyFixedY,LookDirectionBodyFixedZ,LookDirectionJ2000X,LookDirectionJ2000Y,LookDirectionJ2000Z,LookDirectionCameraX,LookDirectionCameraY,LookDirectionCameraZ,ObliqueDetectorResolution,ObliquePixelResolution,ObliqueLineResolution,ObliqueSampleResolution,Error
+
+
+
 
 Documentation
 -------------

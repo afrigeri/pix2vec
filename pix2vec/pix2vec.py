@@ -9,27 +9,22 @@ import argparse
 import string
 import logging
 
+from . import CPT_FIELDS, GCS_DICT
+
 log = logging.getLogger('test')
 log.setLevel(logging.DEBUG)
-
-FIELDS = {
-                'sample': {'field' :'Sample', 'type': ogr.OFTInteger },
-                'line'  : {'field' :'Line', 'type': ogr.OFTInteger },
-                'radius': {'field' :'LocalRadius', 'type': ogr.OFTReal },
-                'value':  {'field' :'PixelValue', 'type': ogr.OFTReal },
-                }
 
 class Cube:
     def __init__(self,isis_cube):
         InsID = isis.getkey_k(isis_cube, 'Instrument', 'InstrumentId')
         samples = isis.getkey_k(isis_cube,'Dimensions','Samples')
         lines = isis.getkey_k(isis_cube,'Dimensions','Lines')
+        target = isis.getkey_k(isis_cube,'Instrument','TargetName')
         self.id = InsID
         self.lines = int(lines)
         self.samples = int(samples)
         self.fname = isis_cube
-
-        
+        self.target = target
 
 class GndPixels:
     '''
@@ -49,6 +44,9 @@ class GndPixels:
         #
         self.ds = None          # Datasource
         self.layer = None       # Layer
+        self.layername =  "spectrometer" # Layer
+        self.srs = osr.SpatialReference()
+        self.srs.SetFromUserInput(GCS_DICT[cube.target])
 
         #self.write_all()
         #self.poly = self.get_poly()
@@ -73,20 +71,12 @@ class GndPixels:
                     clwriter.writerow((j,i))         # 6 center
         sys.stdout.write("wrote coordlist %s\n"%self.coordlistfname)
     def write_vertex(self):
-        #
-        #p = isis.campt(self.cube.fname,sample=s,line=l,format='flat',to=self.csvfname)
-        sys.stdout.write("reading coordlist %s\n and computing campt\n"%self.coordlistfname)
+        '''
+        write the vales for the vertices
+        '''
+        sys.stdout.write("computing campt from %s\n"%self.coordlistfname)
         p = isis.campt(self.cube.fname,usecoordlist=True,coordlist=self.coordlistfname,format='FLAT',to=self.cptfname,coordtype='image')
-        sys.stdout.write("campt done!")
-
-    '''
-    def write_file(self,file):
-
-        outShapefile = "pippo.gpkg"
-        outDriver = ogr.GetDriverByName("GPKG")
-        outDataSource = outDriver.CreateDataSource(outShapefile)
-        self.ds = outDataSource
-    '''
+        sys.stdout.write("campt done!\n")
 
     def _open_ds(self,vect_output):
         # Create the output Layer
@@ -97,27 +87,25 @@ class GndPixels:
         outDataSource = outDriver.CreateDataSource(vect_output)
         self.ds = outDataSource
 
-
-
-
     def _layer_out(self):
 
         # create the spatial reference system, WGS84
-        srs =  osr.SpatialReference()
-        srs.SetFromUserInput("IAU:30100") # Moon
+        
 
-        self.layer = self.ds.CreateLayer("states_centroids", srs, geom_type=ogr.wkbPolygon)
 
-        for f in FIELDS:
-            this_field = ogr.FieldDefn(f, FIELDS[f]['type'])
+        self.layer = self.ds.CreateLayer( self.layername , self.srs, geom_type=ogr.wkbPolygon)
+
+        for k in CPT_FIELDS.keys():
+            this_field = ogr.FieldDefn(k, CPT_FIELDS[k])
             self.layer.CreateField(this_field)
 
 
 
 
     def add_gndpixel_features(self):
-        #self.file = 'pippo1'
-        #print("========>"+self.cptfname)
+        '''
+		Adds the features
+		'''
         with open(self.cptfname, 'r') as fp:
             row_count = len(fp.readlines()) - 1
         fp.close()
@@ -143,7 +131,7 @@ class GndPixels:
                     #       v = float(row[f['field']])
                     #       #feature.SetField(f,v)
 
-
+                    ''' 
                     sample_no = float(row['Sample'])
                     line_no = float(row['Line'])
                     if row['LocalRadius'] != 'Null':
@@ -157,9 +145,13 @@ class GndPixels:
                     feature.SetField("line", line_no)
                     feature.SetField("radius", radius)
                     feature.SetField("value", value)
+                    '''
+                    row['Sample'] = int(round(float(row['Sample'])))
+                    row['Line'] = int(round(float(row['Line'])))
+                    for k in CPT_FIELDS.keys():
+                        val = row[ k ]
+                        feature.SetField( k , val)
 
-
-                    #print("sample: %d line: %d"%(sample_no,line_no))
                     poly = ogr.Geometry(ogr.wkbPolygon)
                     poly.AddGeometry(ring)
                     del ring
