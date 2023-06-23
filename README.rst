@@ -34,7 +34,7 @@ Features
 Requirements
 ------------
 
-* a relatively recent `Integrated Software for Imagers and Spectrometers (ISIS) <https://isis.astrogeology.usgs.gov>` installation and the `kalasiris <https://github.com/rbeyer/kalasiris>` module (which will be installed automatically).
+* a relatively recent `Integrated Software for Imagers and Spectrometers (ISIS) <https://isis.astrogeology.usgs.gov>`_ installation and the `kalasiris <https://github.com/rbeyer/kalasiris>`_ module (which will be installed automatically).
  
 Cite in your work
 -------------------
