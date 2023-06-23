@@ -70,7 +70,7 @@ now we create a vector GIS file representing the geometry of the sensor's pixel 
 
 the vector file can then be loaded in your favorite GIS, and we can plot the `PixelValue` field:
 
-.. image:: docs/images/m3cube-c.png
+.. image:: /docs/images/m3cube-c.png
         :alt: M3-subcube
         :width: 600
 
