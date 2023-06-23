@@ -5,7 +5,7 @@ Welcome to pix2vec's documentation!
 cubes into vector GIS files.  
 
 The vector representation of the cube ground pixels is saved into a 
-geopackage file, thus the data can be queried as you would with a database.
+geopackage file, thus, the data can be queried as you would with a database.
 
 .. toctree::
    :maxdepth: 2

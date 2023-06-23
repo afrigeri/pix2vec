@@ -8,11 +8,11 @@ def main():
     """Console script for pix2vec."""
     parser = argparse.ArgumentParser()
 	
-    parser.add_argument('_', nargs='*')
-    parser.add_argument('-c','--cube')
-    parser.add_argument('-o','--output')
-    parser.add_argument('-l', '--lines')
-    parser.add_argument('-s', '--samples')
+    parser.add_argument('-c','--cube', required=True)
+    parser.add_argument('-o','--output',help='geopackage GIS output file')
+    parser.add_argument('-l', '--lines',help='the range of lines to be included in the output file\n \
+	                                          e.g. 1,10 to set line 1 to 10 (extreme included)')
+    parser.add_argument('-s', '--samples',help='the range of samples to be included in the output file')
     parser.add_argument('-d', '--debug')
     parser.add_argument('-i', '--info', action='store_true', dest='info')
 	

@@ -72,9 +72,15 @@ now we create a vector GIS file representing the geometry of the sensor's pixel 
 
     pix2vec -c M3G20090103T084105_V03_L1B.cub -s 152,162 -l5864,5874 -o M3G20090103T084105_V03_L1B_center.gpkg 
 
-the vector file can then be loaded in your favorite GIS, and we can plot the `PixelValue` field:
+the vector file can then be loaded in your favorite GIS, and we can plot the file with a `PixelValue` greyscale:
 
-.. image:: /docs/images/m3cube-c.png
+.. image:: /docs/images/m3pixelvalue.png
+        :alt: M3-PixelValue
+        :width: 600
+
+each ground pixel element holds information that can be accessed:
+
+.. image:: /docs/images/m3-detail.png
         :alt: M3-subcube
         :width: 600
 
@@ -95,6 +101,9 @@ for each ground-projected pixel, you now have access to these fields::
 	LookDirectionJ2000Z LookDirectionCameraX LookDirectionCameraY 
 	LookDirectionCameraZ ObliqueDetectorResolution ObliquePixelResolution 
 	ObliqueLineResolution ObliqueSampleResolution Error
+
+we can process this data as we would with any geospatial vector data::
+
 
 
 
