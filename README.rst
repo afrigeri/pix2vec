@@ -70,7 +70,7 @@ Let's start with an hyperspectral cube from the The Moon Mineralogy Mapper (M3),
 
 now we create a vector GIS file representing the geometry of the sensor's pixel on the lunar surface::
 
-    pix2vec -c M3G20090103T084105_V03_L1B.cub -s 152,162 -l5864,5874 -o M3G20090103T084105_V03_L1B_center.gpkg 
+    pix2vec -c M3G20090103T084105_V03_L1B.cub -s 1,150 -l 3050,3200 -o M3G20090103T084105_V03_L1B_subset.gpkg 
 
 the vector file can then be loaded in your favorite GIS, and we can plot the file with a `PixelValue` greyscale:
 
@@ -101,8 +101,6 @@ for each ground-projected pixel, you now have access to these fields::
 	LookDirectionJ2000Z LookDirectionCameraX LookDirectionCameraY 
 	LookDirectionCameraZ ObliqueDetectorResolution ObliquePixelResolution 
 	ObliqueLineResolution ObliqueSampleResolution Error
-
-we can process this data as we would with any geospatial vector data::
 
 
 

@@ -7,5 +7,5 @@ __version__ = '0.1.0'
 
 GCS_DICT = {
 	"MOON": "IAU:30100",
-	"MARS": "IAU:49900",
+	"Mars": "IAU:49900",
 }  
