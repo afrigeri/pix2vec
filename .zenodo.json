@@ -5,7 +5,7 @@
       "name": "Frigeri, Alessandro",
       "orcid": "0000-0002-9140-3977"
     },
-  ]
+  ],
   "title": "pix2vect",
   "description": "A software tool to generate geospatial vector representation of planetary spectrometers.",
   "license": "gpl",
