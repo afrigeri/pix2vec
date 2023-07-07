@@ -13,8 +13,9 @@ def main():
     parser.add_argument('-l', '--lines',help='the range of lines to be included in the output file\n \
 	                                          e.g. 1,10 to set line 1 to 10 (extreme included)')
     parser.add_argument('-s', '--samples',help='the range of samples to be included in the output file')
+    parser.add_argument('-i', '--info', action='store_true', dest='info',help='reports info about the \n\
+	                                 cube ')
     parser.add_argument('-d', '--debug')
-    parser.add_argument('-i', '--info', action='store_true', dest='info')
 	
     args = parser.parse_args()
 
