@@ -30,7 +30,7 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
     ],
-    description="pix2vec produces a vector representation of planetary mapping spectrometers starting from hyperspectral an ISIS data cube",
+    description="pix2vec produces a vector representation of planetary mapping spectrometers hyperspectral and camera ISIS data cube",
     entry_points={
         'console_scripts': [
             'pix2vec=pix2vec.cli:main',
@@ -39,6 +39,7 @@ setup(
     install_requires=requirements,
     license="GNU General Public License v3",
     long_description=readme + '\n\n' + history,
+    long_description_content_type="text/x-rst",
     include_package_data=True,
     keywords='pix2vec',
     name='pix2vec',
@@ -46,6 +47,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/afrigeri/pix2vec',
-    version='0.1.2',
+    version='0.1.3',
     zip_safe=False,
 )

@@ -74,13 +74,13 @@ now we create a vector GIS file representing the geometry of the sensor's pixel 
 
 the vector file can then be loaded in your favorite GIS, and we can plot the file with a `PixelValue` greyscale:
 
-.. image:: /docs/images/m3-PixelValue.png
+.. image:: https://github.com/afrigeri/pix2vec/raw/main/docs/images/m3-PixelValue.png
         :alt: M3-PixelValue
         :width: 600
 
 each ground pixel element holds information that can be accessed:
 
-.. image:: /docs/images/m3-detail.png
+.. image:: https://github.com/afrigeri/pix2vec/raw/main/docs/images/m3-detail.png
         :alt: M3-subcube
         :width: 600
 
