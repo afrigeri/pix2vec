@@ -13,6 +13,8 @@ pix2vec
         :target: https://pix2vec.readthedocs.io/en/latest/?version=latest
         :alt: Documentation Status
 
+.. image:: https://zenodo.org/badge/656602618.svg
+   :target: https://zenodo.org/badge/latestdoi/656602618
 
 pix2vec: Vector Representation of Planetary Hyperspectral Data Cubes
 
