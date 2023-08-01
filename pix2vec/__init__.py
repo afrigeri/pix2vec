@@ -2,7 +2,7 @@
 
 __author__ = """Alessandro Frigeri"""
 __email__ = 'alessandro.frigeri@inaf.it'
-__version__ = '0.1.4'
+__version__ = '0.1.5'
 
 
 GCS_DICT = {

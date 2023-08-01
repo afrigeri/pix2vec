@@ -13,7 +13,7 @@
   ],
   "title": "pix2vect",
   "description": "A software tool to generate geospatial vector representation of planetary spectrometers.",
-  "license": "gpl",
+  "license": "GPL-3.0",
   "access_right": "open",
   "upload_type": "software"    
 }
