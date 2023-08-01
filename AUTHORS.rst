@@ -2,10 +2,11 @@
 Credits
 =======
 
-Development Lead
+Development 
 ----------------
 
 * Alessandro Frigeri, Istituto Nazionale di Astrofisica - INAF <alessandro.frigeri@inaf.it>
+* Trent Hare, United States Geological Survey - USGS <thare@usgs.gov>
 
 Contributors
 ------------
