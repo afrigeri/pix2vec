@@ -9,7 +9,7 @@
       "affiliation": "United States Geological Survey, Astrogeology Science Center",
       "name": "Hare, Trent",
       "orcid": "0000-0001-8842-389X"
-    },
+    }
   ],
   "title": "pix2vect",
   "description": "A software tool to generate geospatial vector representation of planetary spectrometers.",
